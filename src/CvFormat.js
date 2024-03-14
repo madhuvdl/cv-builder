@@ -44,7 +44,7 @@ const CvFormat = () => {
                   <li>Provided guidance and support in troubleshooting and debugging.</li>
                 </ul>
                 <div className="page-break"></div>
-                <div class="box">Content after the property</div>
+                <div className="box">Content after the property</div>
                 <h5 className="role-title">
                 <span className="time-period">2018-11-2021-07</span>
                   <span className="title-txt">Senior Software Engineer</span> <span className="employer">Kyyba India (P) Ltd, Chennai</span></h5>

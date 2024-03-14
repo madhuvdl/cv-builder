@@ -1,14 +1,33 @@
-const WorkExp = () => {
+import React from 'react';
+
+import { resume_data } from '../../data/mock';
+import RolesList from './RolesList';
+
+const WorkExp = (props) => {
+    // const { experience } = data;
+    console.log('work exp Data Props  ', resume_data.experience);
     return (
         <>
             <div className="page-break" />
-            {/* <h3 className="time-line-title"><span className="title-icon"><i class="bi bi-buildings"></i></span>Work Experience</h3> */}
-            <h5 className="role-title">
-                <span className="time-period">2021-8-Preset</span>
-                <span className="title-txt">Manager/Sr. Professional II-Senior Connectivity & NW Engineer</span> <span className="employer">Capgemini Engineering, Chennai</span>
+            <div>
+            {resume_data.experience.map((item, index) => (
+                <>
+            <h5 className="role-title" key={item.id}>
+                <span className="time-period">{item.duration}</span>
+                <span className="title-txt">{item.role}</span> <span className="employer"> {item.comp}</span>
             </h5>
+
+            <ul className="roles-list">
+                {item.responsibilities.map((role) => (
+                    <li key={role.id}>{role.desc}</li>
+                ))}
+            </ul>
+                </>
+            ))}
+
+            </div>
         </>
     )
 }
 
-export default WorkExp;
+export default React.memo(WorkExp);
