@@ -21,7 +21,7 @@ const Summary = (props) => {
                 )
                 }
                
-                <div className="page-break" />
+                {/* <div className="page-break" /> */}
                 <Education data={education} />
                
               </div>

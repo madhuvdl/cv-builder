@@ -8,7 +8,7 @@ const WorkExp = (props) => {
     console.log('work exp Data Props  ', resume_data.experience);
     return (
         <>
-            <div className="page-break" />
+            {/* <div className="page-break" /> */}
             <div>
             {resume_data.experience.map((item, index) => (
                 <>

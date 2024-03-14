@@ -8,7 +8,7 @@ function Card(props) {
       {/* <ul>
         {data?.map(({ description }) => (
           <> */}
-            <div className="page-break" />
+            {/* <div className="page-break" /> */}
             <GroupIntro group={props.card}/>
             <div className="sign-block">
                 <h3 className="thankyou">{signInfo}</h3>
