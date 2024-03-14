@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Here there are more general styles */
+
+/* Variables */
+:root {
+  --fontSize: 14px;
+  --fontFamily: "sofia-pro", sans-serif;
+  --fontWeight: 400;
+  --color: #1c3954;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* General styles */
+
+body {
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily);
+  color: var(--color);
+}
+
+a {
+  font-family: var(--fontFamily);
+  color: var(--color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 25px 52px;
+  max-width: 768px;
+}
+
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+
+@media print {
+  html,
+  body {
+    height: initial !important;
+    overflow: initial !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+@media print {
+  .page-break {
+    margin-top: 1rem;
+    display: block;
+    page-break-before: auto;
+  }
+}
+
+@page {
+  size: 210mm 297mm; 
+  /* Chrome sets own margins, we change these printer settings */
+  margin: 27mm 16mm 27mm 16mm; 
+}
+
+@media print 
+{
+    @page {
+      size: A4; /* DIN A4 standard, Europe */
+      margin: 0;
+    }
+    html, body {
+        width: 210mm;
+        /* height: 297mm; */
+        height: 282mm;
+        font-size: 11px;
+        background: #FFF;
+        overflow: visible;
+    }
+    body {
+        padding-top: 15mm;
+    }
 }

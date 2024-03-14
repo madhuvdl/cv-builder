@@ -1,0 +1,33 @@
+/* .group {
+    margin-bottom: 20px;
+  }
+  
+  .group > .group_intro_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .group h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+  
+  .group hr {
+    border: 0;
+    height: 1px;
+    background: #f77c54;
+    align-self: start;
+    margin-top: 20px;
+    flex-grow: 2;
+  }
+  
+  .group > .group_intro_description {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+   */
